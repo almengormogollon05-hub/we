@@ -1,0 +1,2132 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <head>
+
+        <!-- =========================================
+                    CONFIGURACIÓN GENERAL
+        ========================================== -->
+
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Sistema de Comedor Universitario</title>
+
+            <!-- CSS -->
+        <link rel="stylesheet" href="css/reco.css">
+
+        <!-- Font Awesome -->
+        <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    </head>
+
+    <body>
+
+        <!-- =========================================
+                            HEADER
+        ========================================= -->
+
+        <header class="header" id="header">
+
+            <!-- Fondo decorativo -->
+            <img
+                class="bg"
+                src="images/bg.png"
+                alt="Fondo decorativo"
+                loading="lazy">
+
+            <!-- =========================================
+                            MENÚ
+            ========================================== -->
+
+            <div class="menu container">
+
+                <!-- Logo -->
+                <a href="#" class="logo">
+                    Logo
+                </a>
+
+                <!-- Botón menú responsive -->
+                <input type="checkbox" id="menu">
+
+                <label for="menu">
+                    <img
+                        src="images/menu.png"
+                        class="menu-icono"
+                        alt="Abrir menú"
+                        loading="lazy">
+                </label>
+
+                <!-- Navegación -->
+
+                <nav class="navbar">
+
+                    <ul>
+
+                        <li>
+                            <a href="#header">Inicio</a>
+                        </li>
+
+                        <li>
+                            <a href="#recomendaciones">
+                                Recomendaciones
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#plan-nutricional">
+                                Plan Nutricional
+                            </a>
+                        </li>
+                         <li>
+                            <a href="#comida">
+                                Comida
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#monitoreo-corporal">
+                                Monitoreo
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#productos">
+                                Productos Premium
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#app">
+                                Contacto
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </nav>
+
+                <!-- =========================================
+                            CARRITO
+                ========================================== -->
+
+                <div class="submenu">
+
+                    <img
+                        src="images/car.svg"
+                        id="img-carrito"
+                        alt="Carrito de compras"
+                        loading="lazy">
+
+                    <div id="carrito">
+
+                        <table id="lista-carrito">
+
+                            <thead>
+
+                                <tr>
+
+                                    <th>Imagen</th>
+
+                                    <th>Nombre</th>
+
+                                    <th>Precio</th>
+
+                                    <th></th>
+
+                                </tr>
+
+                            </thead>
+
+                            <tbody>
+
+                                <!-- El JS agrega los productos -->
+
+                            </tbody>
+
+                        </table>
+
+                        <a
+                            href="#"
+                            id="vaciar-carrito"
+                            class="btn-3">
+
+                            Vaciar carrito
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- =========================================
+                HERO PRINCIPAL
+            ========================================== -->
+
+            <div class="header-content-conteiner container">
+
+                <!-- Información principal -->
+
+                <div class="header-txt">
+
+                    <h1>
+
+                        Bienvenido,
+                        disfruta de nuestros platillos
+
+                    </h1>
+
+                    <p>
+
+                        Sistema de comedor universitario con menú diario,
+                        carrito inteligente de pedidos y recomendaciones
+                        nutricionales personalizadas para estudiantes.
+
+                    </p>
+
+                    <button
+                        type="button"
+                        class="btn-1"
+                        onclick="mostrarInformacion()">
+
+                        Más información
+
+                    </button>
+
+                    <!-- Información desplegable -->
+
+                    <div
+                        id="infoExtra"
+                        class="info-extra"
+                        style="display:none;">
+
+                        <h3>¿Qué ofrece nuestro sistema?</h3>
+
+                        <p>
+
+                            Nuestro Sistema de Comedor Universitario está diseñado para
+                            mejorar la experiencia alimentaria de los estudiantes,
+                            proporcionando recomendaciones nutricionales personalizadas
+                            según la información registrada en el cuestionario.
+
+                        </p>
+
+                        <p>
+
+                            El sistema analiza el objetivo nutricional, nivel de actividad
+                            física, alergias, enfermedades y datos corporales para brindar
+                            sugerencias adaptadas a cada usuario.
+
+                        </p>
+
+                        <p>
+
+                            Además, incorpora un carrito inteligente para gestionar pedidos,
+                            un perfil editable, cálculo automático del Índice de Masa
+                            Corporal (IMC) y recomendaciones de alimentos premium para
+                            complementar una alimentación saludable.
+
+                        </p>
+
+                        <ul>
+
+                            <li>🍽️ Menú diario del comedor universitario.</li>
+
+                            <li>🥗 Recomendaciones nutricionales personalizadas.</li>
+
+                            <li>💪 Adaptación según objetivos y actividad física.</li>
+
+                            <li>⚠️ Detección de alergias y condiciones de salud.</li>
+
+                            <li>📊 Cálculo automático del IMC.</li>
+
+                            <li>🛒 Carrito inteligente para pedidos.</li>
+
+                            <li>👤 Perfil editable del estudiante.</li>
+
+                        </ul>
+
+                    </div>
+
+                </div>
+
+                <!-- Imagen principal -->
+
+                <figure class="header-img">
+
+                    <img
+                        src="images/pl-1.png"
+                        alt="Platillo principal"
+                        loading="lazy">
+
+                </figure>
+
+            </div>
+
+        </header>
+
+        <!-- =========================================
+                    INICIO DEL CONTENIDO PRINCIPAL
+        ========================================= -->
+
+        <main>
+
+            <!-- =========================================
+                        DESAYUNOS
+            ========================================= -->
+
+            <section class="breakfast container" id="comida">
+
+                <header class="section-title">
+                    <h2>Desayunos</h2>
+                    <p>Horario de atención: 9:00 a.m. - 11:00 a.m.</p>
+                </header>
+
+                <div class="breakfast-content">
+
+                    <article class="breakfast-1">
+
+                        <img src="images/b1.png"
+                            alt="Platillo de desayuno"
+                            loading="lazy">
+
+                        <h3>Platillo1</h3>
+
+                        <div class="card-purchase">
+
+                            <span class="price">S/ 39.90</span>
+
+                            <button type="button" class="add-to-cart">
+                                +
+                            </button>
+
+                        </div>
+
+                    </article>
+
+                    <article class="breakfast-1">
+
+                        <img src="images/b2.png"
+                            alt="Platillo de desayuno"
+                            loading="lazy">
+
+                        <h3>Platillo 2</h3>
+
+                        <div class="card-purchase">
+
+                            <span class="price">S/ 59.90</span>
+
+                           <button type="button" class="add-to-cart">
+                                +
+                            </button>
+
+                        </div>
+
+                    </article>
+
+                    <article class="breakfast-1">
+
+                        <img src="images/b3.png"
+                            alt="Platillo de desayuno"
+                            loading="lazy">
+
+                        <h3>Platillo 3</h3>
+
+                        <div class="card-purchase">
+
+                            <span class="price">S/ 64.90</span>
+
+                            <button type="button" class="add-to-cart">
+                                +
+                            </button>
+
+                        </div>
+
+                    </article>
+
+                    <article class="breakfast-1">
+
+                        <img src="images/b4.png"
+                            alt="Platillo de desayuno"
+                            loading="lazy">
+
+                        <h3>Platillo 4</h3>
+
+                        <div class="card-purchase">
+
+                            <span class="price">S/ 25.90</span>
+
+                            <button type="button" class="add-to-cart">
+                                +
+                            </button>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </section>
+
+            <!-- =========================================
+                            ALMUERZOS
+            ========================================= -->
+
+            <section class="lunch container" >
+
+                <header class="section-title">
+
+                    <h2>Almuerzo</h2>
+
+                    <p>Horario de atención: 2:00 p.m. - 4:00 p.m.</p>
+
+                </header>
+
+                <div class="lunch-content">
+
+                    <article class="lunch-1">
+
+                        <img src="images/b5.png"
+                            alt="Platillo de almuerzo"
+                            loading="lazy">
+
+                        <h3>Platillo 5</h3>
+
+                        <div class="card-purchase">
+
+                            <span class="price">S/ 45.90</span>
+
+                            <button type="button" class="add-to-cart">
+                                +
+                            </button>
+
+                        </div>
+
+                    </article>
+
+                    <article class="lunch-1">
+
+                        <img src="images/b6.png"
+                            alt="Platillo de almuerzo"
+                            loading="lazy">
+
+                        <h3>Platillo 6</h3>
+
+                        <div class="card-purchase">
+
+                            <span class="price">S/ 42.90</span>
+
+                            <button type="button" class="add-to-cart">
+                                +
+                            </button>
+
+                        </div>
+
+                    </article>
+
+                    <article class="lunch-1">
+
+                        <img src="images/b7.png"
+                            alt="Platillo de almuerzo"
+                            loading="lazy">
+
+                        <h3>Platillo 7</h3>
+
+                        <div class="card-purchase">
+
+                            <span class="price">S/ 20.90</span>
+
+                            <button type="button" class="add-to-cart">
+                                +
+                            </button>
+
+                        </div>
+
+                    </article>
+
+                    <article class="lunch-1">
+
+                        <img src="images/b8.png"
+                            alt="Platillo de almuerzo"
+                            loading="lazy">
+
+                        <h3>Platillo 8</h3>
+
+                        <div class="card-purchase">
+
+                            <span class="price">S/ 39.90</span>
+
+                            <button type="button" class="add-to-cart">
+                                +
+                            </button>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </section>
+
+            <!-- =========================================
+                                CENAS
+            ========================================= -->
+
+            <section class="dinner container">
+
+                <header class="section-title">
+
+                    <h2>Cena</h2>
+
+                    <p>Horario de atención: 6:00 p.m. - 10:00 p.m.</p>
+
+                </header>
+
+                <div class="dinner-content">
+
+                    <article class="dinner-1">
+
+                        <img src="images/b9.png"
+                            alt="Platillo de cena"
+                            loading="lazy">
+
+                        <h3>Platillo 9</h3>
+
+                        <div class="card-purchase">
+
+                            <span class="price">S/ 35.00</span>
+
+                            <button type="button" class="add-to-cart">
+                                +
+                            </button>
+
+                        </div>
+
+                    </article>
+
+                    <article class="dinner-1">
+
+                        <img src="images/b10.png"
+                            alt="Platillo de cena"
+                            loading="lazy">
+
+                        <h3>Platillo 10</h3>
+
+                        <div class="card-purchase">
+
+                            <span class="price">S/ 48.00</span>
+
+                            <button type="button" class="add-to-cart">
+                                +
+                            </button>
+
+                        </div>
+
+                    </article>
+
+                    <article class="dinner-1">
+
+                        <img src="images/b11.png"
+                            alt="Platillo de cena"
+                            loading="lazy">
+
+                        <h3>Platillo 11</h3>
+
+                        <div class="card-purchase">
+
+                            <span class="price">S/ 29.00</span>
+
+                            <button type="button" class="add-to-cart">
+                                +
+                            </button>
+
+                        </div>
+
+                    </article>
+
+                    <article class="dinner-1">
+
+                        <img src="images/b12.png"
+                            alt="Platillo de cena"
+                            loading="lazy">
+
+                        <h3>Platillo 12</h3>
+
+                        <div class="card-purchase">
+
+                            <span class="price">S/ 55.00</span>
+
+                            <button type="button" class="add-to-cart">
+                                +
+                            </button>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </section>
+
+            <!-- =========================================
+                    INFORMACIÓN DEL COMEDOR
+            ========================================= -->
+
+            <section class="info">
+
+                <img
+                    class="bg-2"
+                    src="images/bg-2.png"
+                    alt="Elemento decorativo"
+                    loading="lazy">
+
+                <div class="info-content container">
+
+                    <!-- Imagen -->
+
+                    <figure class="info-img">
+
+                        <img
+                            src="images/breakfast.png"
+                            alt="Alimentos saludables"
+                            loading="lazy">
+
+                    </figure>
+
+                    <!-- Texto -->
+
+                    <article class="info-txt">
+
+                        <h2>
+
+                            Calidad en nuestros productos
+
+                        </h2>
+
+                        <p>
+
+                            Ofrecemos alimentos balanceados, preparados bajo
+                            estándares nutricionales y de calidad para mejorar
+                            el rendimiento académico, físico y el bienestar de
+                            toda la comunidad universitaria.
+
+                        </p>
+
+                        <button
+                            type="button"
+                            class="btn-1"
+                            onclick="mostrarInfoComedor(this)">
+
+                            Más información
+
+                        </button>
+
+                        <!-- Información desplegable -->
+
+                        <div
+                            id="infoComedor"
+                            class="info-extra"
+                            style="display:none;">
+
+                            <h3>Nuestro compromiso con la calidad</h3>
+
+                            <p>
+
+                                Todos nuestros alimentos son preparados siguiendo
+                                estrictas normas de higiene y seguridad alimentaria,
+                                garantizando productos frescos y de alta calidad para
+                                la comunidad universitaria.
+
+                            </p>
+
+                            <p>
+
+                                Cada menú es elaborado considerando el equilibrio entre
+                                proteínas, carbohidratos, grasas saludables, vitaminas y
+                                minerales necesarios para favorecer el rendimiento físico
+                                y académico de los estudiantes.
+
+                            </p>
+
+                            <p>
+
+                                Además, el sistema permite adaptar las recomendaciones
+                                nutricionales de acuerdo con las alergias, enfermedades,
+                                objetivos personales y nivel de actividad física de cada
+                                usuario.
+
+                            </p>
+
+                            <ul>
+
+                                <li>🥗 Menús balanceados diariamente.</li>
+
+                                <li>🍎 Ingredientes frescos y seleccionados.</li>
+
+                                <li>🩺 Adaptación según alergias y enfermedades.</li>
+
+                                <li>💪 Recomendaciones nutricionales personalizadas.</li>
+
+                                <li>📊 Seguimiento mediante el perfil del estudiante.</li>
+
+                            </ul>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </section>
+            <!--=====================================================
+                            PRODUCTOS PREMIUM
+            ======================================================-->
+
+            <section class="products container" id="productos">
+
+                <header class="section-title">
+
+                    <h2>Productos Premium</h2>
+
+                    <p>
+                        Complementa tu alimentación con nuestros productos
+                        seleccionados para mejorar tu rendimiento y bienestar.
+                    </p>
+
+                </header>
+
+                <!-- PRIMEROS PRODUCTOS -->
+
+                <div class="box-container" id="lista-1">
+
+                    <!-- PRODUCTO 1 -->
+
+                    <article class="box">
+
+                        <figure>
+                            <img src="images/pla1.png" alt="Producto Premium" loading="lazy">
+                        </figure>
+
+                        <div class="product-txt">
+
+                            <h3>COMIDA 1</h3>
+
+                            <p>Calidad Premium</p>
+
+                            <p class="precio">$200</p>
+
+                            <button
+                                type="button"
+                                class="agregar-carrito btn-3"
+                                data-id="1">
+
+                                Agregar
+
+                            </button>
+
+                        </div>
+
+                    </article>
+
+                    <!-- PRODUCTO 2 -->
+
+                    <article class="box">
+
+                        <figure>
+                            <img src="images/pla2.png" alt="Producto Premium" loading="lazy">
+                        </figure>
+
+                        <div class="product-txt">
+
+                            <h3>COMIDA 2</h3>
+
+                            <p>Calidad Premium</p>
+
+                            <p class="precio">$200</p>
+
+                            <button
+                                type="button"
+                                class="agregar-carrito btn-3"
+                                data-id="2">
+
+                                Agregar
+
+                            </button>
+
+                        </div>
+
+                    </article>
+
+                    <!-- PRODUCTO 3 -->
+
+                    <article class="box">
+
+                        <figure>
+                            <img src="images/pla3.png" alt="Producto Premium" loading="lazy">
+                        </figure>
+
+                        <div class="product-txt">
+
+                            <h3>COMIDA 3</h3>
+
+                            <p>Calidad Premium</p>
+
+                            <p class="precio">$200</p>
+
+                            <button
+                                type="button"
+                                class="agregar-carrito btn-3"
+                                data-id="3">
+
+                                Agregar
+
+                            </button>
+
+                        </div>
+
+                    </article>
+
+                    <!-- PRODUCTO 4 -->
+
+                    <article class="box">
+
+                        <figure>
+                            <img src="images/pla4.png" alt="Producto Premium" loading="lazy">
+                        </figure>
+
+                        <div class="product-txt">
+
+                            <h3>COMIDA 4</h3>
+
+                            <p>Calidad Premium</p>
+
+                            <p class="precio">$200</p>
+
+                            <button
+                                type="button"
+                                class="agregar-carrito btn-3"
+                                data-id="4">
+
+                                Agregar
+
+                            </button>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+                <!-- PRODUCTOS OCULTOS -->
+
+                <div class="box-container" id="productos-extra" style="display:none;">
+
+                    <!-- PRODUCTO 5 -->
+
+                    <article class="box">
+
+                        <figure>
+                            <img src="images/pla5.png" alt="Producto Premium">
+                        </figure>
+
+                        <div class="product-txt">
+
+                            <h3>COMIDA 5</h3>
+
+                            <p>Calidad Premium</p>
+
+                            <p class="precio">$220</p>
+
+                            <button
+                                type="button"
+                                class="agregar-carrito btn-3"
+                                data-id="5">
+
+                                Agregar
+
+                            </button>
+
+                        </div>
+
+                    </article>
+
+                    <!-- PRODUCTO 6 -->
+
+                    <article class="box">
+
+                        <figure>
+                            <img src="images/pla6.png" alt="Producto Premium">
+                        </figure>
+
+                        <div class="product-txt">
+
+                            <h3>COMIDA 6</h3>
+
+                            <p>Calidad Premium</p>
+
+                            <p class="precio">$210</p>
+
+                            <button
+                                type="button"
+                                class="agregar-carrito btn-3"
+                                data-id="6">
+
+                                Agregar
+
+                            </button>
+
+                        </div>
+
+                    </article>
+
+                    <!-- PRODUCTO 7 -->
+
+                    <article class="box">
+
+                        <figure>
+                            <img src="images/pla7.png" alt="Producto Premium">
+                        </figure>
+
+                        <div class="product-txt">
+
+                            <h3>COMIDA 7</h3>
+
+                            <p>Calidad Premium</p>
+
+                            <p class="precio">$250</p>
+
+                            <button
+                                type="button"
+                                class="agregar-carrito btn-3"
+                                data-id="7">
+
+                                Agregar
+
+                            </button>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+                <!-- BOTÓN -->
+
+                <div class="btn-2" id="load-more">
+
+                    Cargar más
+
+                </div>
+
+            </section>
+
+
+            <!--=====================================================
+                    RECOMENDACIONES PERSONALIZADAS
+            ======================================================-->
+
+            <section class="recomendaciones container" id="recomendaciones">
+
+                <header class="section-title">
+
+                    <h2>Recomendaciones Personalizadas</h2>
+
+                    <p>
+                        La información mostrada se genera automáticamente
+                        según los datos obtenidos del formulario nutricional.
+                    </p>
+
+                </header>
+
+                <div class="reco-block-container">
+             <!--==================================================
+                PERFIL DEL ESTUDIANTE
+              ===================================================-->
+
+                <article class="reco-block1">
+
+                    <h3>Perfil del Estudiante</h3>
+
+                    <figure class="reco-img-container">
+
+                        <img
+                            src="images/perfil.png"
+                            alt="Perfil del estudiante"
+                            loading="lazy"
+                            onerror="this.parentNode.style.display='none'">
+
+                    </figure>
+
+                    <div id="info-usuario">
+
+                        <div class="form-group">
+
+                            <label>Nombre Completo</label>
+
+                            <input
+                                type="text"
+                                id="input-nombre"
+                                placeholder="Nombre">
+
+                        </div>
+
+                        <div class="form-group">
+
+                            <label>Código Universitario</label>
+
+                            <input
+                                type="text"
+                                id="input-codigo"
+                                placeholder="Código">
+
+                        </div>
+
+                        <div class="form-group">
+
+                            <label>Carrera Universitaria</label>
+
+                            <input
+                                type="text"
+                                id="input-carrera"
+                                placeholder="Carrera">
+
+                        </div>
+
+                        <div class="form-group">
+
+                            <label>Sexo</label>
+
+                            <input
+                                type="text"
+                                id="input-sexo"
+                                placeholder="Sexo">
+
+                        </div>
+
+                        <div class="form-group">
+
+                            <label>Peso (kg)</label>
+
+                            <input
+                                type="number"
+                                id="input-peso"
+                                step="0.1">
+
+                        </div>
+
+                        <div class="form-group">
+
+                            <label>Altura (cm)</label>
+
+                            <input
+                                type="number"
+                                id="input-altura">
+
+                        </div>
+
+                    </div>
+
+                    <button
+                        id="btnGuardarPerfil"
+                        class="btn-secondary"
+                        onclick="guardarCambios()">
+
+                        Guardar cambios
+
+                    </button>
+
+                </article>
+             <!--==================================================
+                                OBJETIVO
+             ==================================================-->
+
+                <article class="reco-block2">
+
+                    <h3>Según tu objetivo</h3>
+
+                    <figure class="reco-img-container">
+
+                        <img
+                            src="images/objetivo.png"
+                            alt="Objetivo Nutricional"
+                            loading="lazy"
+                            onerror="this.parentNode.style.display='none'">
+
+                    </figure>
+
+                    <!-- Información principal (la llena dashboard.js) -->
+
+                    <div id="recomendacionObjetivo">
+
+                        <p>Cargando información personalizada...</p>
+
+                    </div>
+
+                    <!-- Información desplegable -->
+
+                    <div
+                        id="detalleObjetivo"
+                        class="detalle-extra"
+                        style="display:none;">
+
+                        <img
+                            id="detalleObjetivoImg"
+                            src="images/uy.png"
+                            alt="Detalle del objetivo"
+                            loading="lazy">
+
+                        <p id="detalleObjetivoTexto">
+
+                            Información adicional...
+
+                        </p>
+
+                    </div>
+
+                    <button
+                        id="btnObjetivo"
+                        class="btn-secondary">
+
+                        Ver detalles
+
+                    </button>
+
+                </article>
+
+            <!--==================================================
+                            ACTIVIDAD FÍSICA
+            ==================================================-->
+
+                <article class="reco-block3">
+
+                    <h3>Actividad Física</h3>
+
+                    <figure class="reco-img-container">
+
+                        <img
+                            src="images/actividad.png"
+                            alt="Actividad Física"
+                            loading="lazy"
+                            onerror="this.parentNode.style.display='none'">
+
+                    </figure>
+
+                    <!-- Información principal -->
+
+                    <div id="recomendacionActividad">
+
+                        <p>Cargando nivel de actividad...</p>
+
+                    </div>
+
+                    <!-- Información desplegable -->
+
+                    <div
+                        id="detalleActividad"
+                        class="detalle-extra"
+                        style="display:none;">
+
+                        <img
+                            id="detalleActividadImg"
+                            src="images/deni.png"
+                            alt="Actividad Física"
+                            loading="lazy">
+
+                        <p id="detalleActividadTexto">
+
+                            Información adicional...
+
+                        </p>
+
+                    </div>
+
+                    <button
+                        id="btnActividad"
+                        class="btn-secondary">
+
+                        Rendimiento
+
+                    </button>
+                </article>
+                        <!--==================================================
+                            ALERGIAS
+            ==================================================-->
+
+                <article class="reco-block4">
+
+                    <h3>Alergias Detectadas</h3>
+
+                    <figure class="reco-img-container">
+
+                        <img
+                            src="images/alergias.png"
+                            alt="Alergias"
+                            loading="lazy"
+                            onerror="this.parentNode.style.display='none'">
+
+                    </figure>
+
+                    <!-- Información principal -->
+
+                    <div id="recomendacionAlergias">
+
+                        <p>Cargando alertas médicas...</p>
+
+                    </div>
+
+                    <!-- Información desplegable -->
+
+                    <div
+                        id="detalleAlergias"
+                        class="detalle-extra"
+                        style="display:none;">
+
+                       
+
+                        <p id="detalleAlergiasTexto">
+
+                            Información adicional...
+
+                        </p>
+
+                    </div>
+
+                    <button
+                        id="btnAlergias"
+                        class="btn-secondary">
+
+                        Alertas
+
+                    </button>
+
+                </article>
+
+                   <!--==================================================
+                CONDICIONES DE SALUD
+                ===================================================-->
+
+                <article class="reco-block5">
+
+                    <h3>Condiciones de Salud</h3>
+
+                    <figure class="reco-img-container">
+
+                        <img
+                            src="images/salud.png"
+                            alt="Condiciones de Salud"
+                            loading="lazy"
+                            onerror="this.parentNode.style.display='none'">
+
+                    </figure>
+
+                    <!-- Información principal -->
+
+                    <div id="recomendacionEnfermedades">
+
+                        <p>Cargando historial de salud...</p>
+
+                    </div>
+
+                    <!-- Información desplegable -->
+
+                    <div
+                        id="detalleSalud"
+                        class="detalle-extra"
+                        style="display:none;">
+
+                       
+                        <p id="detalleSaludTexto">
+
+                            Información adicional...
+
+                        </p>
+
+                    </div>
+
+                    <button
+                        id="btnHistorial"
+                        class="btn-secondary">
+
+                        Historial
+
+                    </button>
+
+                </article>
+
+                <!--==================================================
+                    IMC
+                ===================================================-->
+
+                <article class="reco-block6">
+
+                    <h3>Índice de Masa Corporal (IMC)</h3>
+
+                    <div id="info-imc">
+
+                        <div class="form-group">
+
+                            <label for="imc-peso">Peso (kg)</label>
+
+                            <input
+                                type="number"
+                                id="imc-peso"
+                                min="1"
+                                step="0.1"
+                                placeholder="Ingrese su peso">
+
+                        </div>
+
+                        <div class="form-group">
+
+                            <label for="imc-altura">Altura (cm)</label>
+
+                            <input
+                                type="number"
+                                id="imc-altura"
+                                min="1"
+                                step="0.1"
+                                placeholder="Ingrese su altura">
+
+                        </div>
+
+                        <button
+                            type="button"
+                            id="btnCalcularIMC"
+                            class="btn-secondary"
+                            onclick="calcularIMC()">
+
+                            Calcular IMC
+
+                        </button>
+
+                        <div class="form-group" style="margin-top:20px;">
+
+                            <label for="resultado-imc">Tu IMC</label>
+
+                            <input
+                                type="text"
+                                id="resultado-imc"
+                                readonly
+                                placeholder="0.00">
+
+                        </div>
+
+                        <div
+                            id="detalleIMC"
+                            class="detalle-extra"
+                            style="display:none;">
+
+                            <h4>Evaluación</h4>
+
+                            <p id="detalleIMCTexto"></p>
+
+                        </div>
+
+                    </div>
+
+                </article>
+            </section>
+            <!--=====================================================
+                            PLAN NUTRICIONAL
+            ======================================================-->
+
+            <section class="plan-section" id="plan-nutricional">
+
+                <div class="horizontal-card">
+
+                    <!--=====================================
+                                ENCABEZADO
+                    ======================================-->
+
+                    <header class="section-header">
+
+                        <h2>
+                            <i class="fa-solid fa-utensils"></i>
+                            Plan Nutricional Personalizado
+                        </h2>
+
+                        <p>
+                            Este plan alimenticio ha sido generado automáticamente según la
+                            información registrada en el cuestionario del estudiante.
+                        </p>
+
+                    </header>
+
+                    <!--=====================================
+                                GRID PRINCIPAL
+                    ======================================-->
+
+                    <div class="plan-grid">
+
+                        <!--=====================================
+                                PLAN DIARIO
+                        ======================================-->
+
+                        <article class="plan-card">
+
+                            <h3>
+
+                                <i class="fa-solid fa-calendar-day"></i>
+
+                                Plan Diario
+
+                            </h3>
+
+                            <div class="comida-item">
+
+                                <span class="titulo-comida">
+
+                                    🍳 Desayuno
+
+                                </span>
+
+                                <p id="planDesayuno">
+
+                                    Cargando plan...
+
+                                </p>
+
+                            </div>
+
+                            <div class="comida-item">
+
+                                <span class="titulo-comida">
+
+                                    ☕ Media mañana
+
+                                </span>
+
+                                <p id="planMedia">
+
+                                    Cargando plan...
+
+                                </p>
+
+                            </div>
+
+                            <div class="comida-item">
+
+                                <span class="titulo-comida">
+
+                                    🍛 Almuerzo
+
+                                </span>
+
+                                <p id="planAlmuerzo">
+
+                                    Cargando plan...
+
+                                </p>
+
+                            </div>
+
+                            <div class="comida-item">
+
+                                <span class="titulo-comida">
+
+                                    🥪 Media tarde
+
+                                </span>
+
+                                <p id="planTarde">
+
+                                    Cargando plan...
+
+                                </p>
+
+                            </div>
+
+                            <div class="comida-item">
+
+                                <span class="titulo-comida">
+
+                                    🌙 Cena
+
+                                </span>
+
+                                <p id="planCena">
+
+                                    Cargando plan...
+
+                                </p>
+
+                            </div>
+
+                        </article>
+
+                        <!--=====================================
+                                ALIMENTOS A REDUCIR
+                        ======================================-->
+
+                        <article class="plan-card">
+
+                            <h3>
+
+                                <i class="fa-solid fa-ban"></i>
+
+                                Alimentos a Reducir
+
+                            </h3>
+
+                            <ul class="lista-plan">
+
+                                <li>Azúcar refinada.</li>
+
+                                <li>Harinas procesadas.</li>
+
+                                <li>Bebidas azucaradas.</li>
+
+                                <li>Comida rápida.</li>
+
+                                <li>Grasas saturadas.</li>
+
+                                <li>Embutidos.</li>
+
+                                <li>Snacks ultraprocesados.</li>
+
+                            </ul>
+
+                        </article>
+
+                        <!--=====================================
+                                RECOMENDACIONES
+                        ======================================-->
+
+                        <article class="plan-card">
+
+                            <h3>
+
+                                <i class="fa-solid fa-heart-pulse"></i>
+
+                                Recomendaciones
+
+                            </h3>
+
+                            <ul class="lista-plan">
+
+                                <li>Consumir 2 a 3 litros de agua diariamente.</li>
+
+                                <li>Dormir entre 7 y 8 horas.</li>
+
+                                <li>Consumir frutas diariamente.</li>
+
+                                <li>Consumir verduras en cada almuerzo.</li>
+
+                                <li>Preferir proteínas magras.</li>
+
+                                <li>Evitar bebidas azucaradas.</li>
+
+                                <li>Realizar actividad física.</li>
+
+                            </ul>
+
+                            <hr>
+
+                            <h4>
+
+                                Aliños recomendados
+
+                            </h4>
+
+                            <ul class="lista-plan">
+
+                                <li>Aceite de oliva + limón.</li>
+
+                                <li>Yogurt griego + mostaza.</li>
+
+                                <li>Vinagre balsámico.</li>
+
+                            </ul>
+
+                        </article>
+
+                        <!--=====================================
+                                PRODUCTOS SUGERIDOS
+                        ======================================-->
+
+                        <article class="plan-card productos-card">
+
+                            <h3>
+
+                                <i class="fa-solid fa-basket-shopping"></i>
+
+                                Productos Recomendados
+
+                            </h3>
+
+                            <div class="galeria-productos">
+
+                                <figure>
+
+                                    <img id="prod1-img">
+
+                                    <figcaption id="prod1-texto"></figcaption>
+
+                                </figure>
+
+                                <figure>
+
+                                    <img id="prod2-img">
+
+                                    <figcaption id="prod2-texto"></figcaption>
+
+                                </figure>
+
+                                <figure>
+
+                                    <img id="prod3-img">
+
+                                    <figcaption id="prod3-texto"></figcaption>
+
+                                </figure>
+
+                                <figure>
+
+                                    <img id="prod4-img">
+
+                                    <figcaption id="prod4-texto"></figcaption>
+
+                                </figure>
+
+                            </div>
+                        </article>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!--=====================================================
+                    AQUÍ COMIENZA LA PARTE 2
+                    (MONITOREO CORPORAL)
+            ======================================================-->
+            <!--=====================================================
+                            MONITOREO CORPORAL
+            ======================================================-->
+
+            <section class="monitoreo-section" id="monitoreo-corporal">
+
+                <div class="horizontal-card">
+
+                    <!--=====================================
+                                ENCABEZADO
+                    ======================================-->
+
+                    <header class="section-header">
+
+                        <h2>
+
+                            <i class="fa-solid fa-chart-line"></i>
+
+                            Monitoreo Corporal
+
+                        </h2>
+
+                        <p>
+
+                            Registra la evolución física del estudiante durante las
+                            12 evaluaciones de seguimiento.
+
+                        </p>
+
+                    </header>
+
+                    <!--=====================================
+                                TABLA
+                    ======================================-->
+
+                    <div class="table-responsive">
+
+                        <table id="tabla-monitoreo">
+
+                            <thead>
+
+                                <tr>
+
+                                    <th>Concepto</th>
+
+                                    <th>F1</th>
+                                    <th>F2</th>
+                                    <th>F3</th>
+                                    <th>F4</th>
+                                    <th>F5</th>
+                                    <th>F6</th>
+                                    <th>F7</th>
+                                    <th>F8</th>
+                                    <th>F9</th>
+                                    <th>F10</th>
+                                    <th>F11</th>
+                                    <th>F12</th>
+
+                                </tr>
+
+                            </thead>
+
+                            <tbody>
+
+                                <!--=====================================
+                                            FECHA
+                                ======================================-->
+
+                                <tr>
+
+                                    <td class="titulo-fila">
+
+                                        Fecha
+
+                                    </td>
+
+                                    <td><input type="date" class="edit-cell" data-campo="fecha" data-f="1"></td>
+
+                                    <td><input type="date" class="edit-cell" data-campo="fecha" data-f="2"></td>
+
+                                    <td><input type="date" class="edit-cell" data-campo="fecha" data-f="3"></td>
+
+                                    <td><input type="date" class="edit-cell" data-campo="fecha" data-f="4"></td>
+
+                                    <td><input type="date" class="edit-cell" data-campo="fecha" data-f="5"></td>
+
+                                    <td><input type="date" class="edit-cell" data-campo="fecha" data-f="6"></td>
+
+                                    <td><input type="date" class="edit-cell" data-campo="fecha" data-f="7"></td>
+
+                                    <td><input type="date" class="edit-cell" data-campo="fecha" data-f="8"></td>
+
+                                    <td><input type="date" class="edit-cell" data-campo="fecha" data-f="9"></td>
+
+                                    <td><input type="date" class="edit-cell" data-campo="fecha" data-f="10"></td>
+
+                                    <td><input type="date" class="edit-cell" data-campo="fecha" data-f="11"></td>
+
+                                    <td><input type="date" class="edit-cell" data-campo="fecha" data-f="12"></td>
+
+                                </tr>
+
+                                <!--=====================================
+                                            PESO
+                                ======================================-->
+
+                                <tr>
+
+                                    <td class="titulo-fila">
+
+                                        Peso (kg)
+
+                                    </td>
+
+                                    <td><input type="number" class="edit-cell" data-campo="peso" data-f="1"></td>
+
+                                    <td><input type="number" class="edit-cell" data-campo="peso" data-f="2"></td>
+
+                                    <td><input type="number" class="edit-cell" data-campo="peso" data-f="3"></td>
+
+                                    <td><input type="number" class="edit-cell" data-campo="peso" data-f="4"></td>
+
+                                    <td><input type="number" class="edit-cell" data-campo="peso" data-f="5"></td>
+
+                                    <td><input type="number" class="edit-cell" data-campo="peso" data-f="6"></td>
+
+                                    <td><input type="number" class="edit-cell" data-campo="peso" data-f="7"></td>
+
+                                    <td><input type="number" class="edit-cell" data-campo="peso" data-f="8"></td>
+
+                                    <td><input type="number" class="edit-cell" data-campo="peso" data-f="9"></td>
+
+                                    <td><input type="number" class="edit-cell" data-campo="peso" data-f="10"></td>
+
+                                    <td><input type="number" class="edit-cell" data-campo="peso" data-f="11"></td>
+
+                                    <td><input type="number" class="edit-cell" data-campo="peso" data-f="12"></td>
+
+                                </tr>
+
+                                <!--=====================================
+                                            TALLA
+                                ======================================-->
+
+                                <tr>
+
+                                    <td class="titulo-fila">
+
+                                        Talla (cm)
+
+                                    </td>
+
+                                    <td><input type="number" class="edit-cell" data-campo="talla" data-f="1"></td>
+
+                                    <td><input type="number" class="edit-cell" data-campo="talla" data-f="2"></td>
+
+                                    <td><input type="number" class="edit-cell" data-campo="talla" data-f="3"></td>
+
+                                    <td><input type="number" class="edit-cell" data-campo="talla" data-f="4"></td>
+
+                                    <td><input type="number" class="edit-cell" data-campo="talla" data-f="5"></td>
+
+                                    <td><input type="number" class="edit-cell" data-campo="talla" data-f="6"></td>
+
+                                    <td><input type="number" class="edit-cell" data-campo="talla" data-f="7"></td>
+
+                                    <td><input type="number" class="edit-cell" data-campo="talla" data-f="8"></td>
+
+                                    <td><input type="number" class="edit-cell" data-campo="talla" data-f="9"></td>
+
+                                    <td><input type="number" class="edit-cell" data-campo="talla" data-f="10"></td>
+
+                                    <td><input type="number" class="edit-cell" data-campo="talla" data-f="11"></td>
+
+                                    <td><input type="number" class="edit-cell" data-campo="talla" data-f="12"></td>
+
+                                </tr>
+
+                                <!--=====================================
+                                            ABDOMEN
+                                ======================================-->
+
+                                <tr>
+
+                                    <td class="titulo-fila">
+
+                                        Abdomen (cm)
+
+                                    </td>
+
+                                    <td><input type="number" class="edit-cell" data-campo="abdomen" data-f="1"></td>
+
+                                    <td><input type="number" class="edit-cell" data-campo="abdomen" data-f="2"></td>
+
+                                    <td><input type="number" class="edit-cell" data-campo="abdomen" data-f="3"></td>
+
+                                    <td><input type="number" class="edit-cell" data-campo="abdomen" data-f="4"></td>
+
+                                    <td><input type="number" class="edit-cell" data-campo="abdomen" data-f="5"></td>
+
+                                    <td><input type="number" class="edit-cell" data-campo="abdomen" data-f="6"></td>
+
+                                    <td><input type="number" class="edit-cell" data-campo="abdomen" data-f="7"></td>
+
+                                    <td><input type="number" class="edit-cell" data-campo="abdomen" data-f="8"></td>
+
+                                    <td><input type="number" class="edit-cell" data-campo="abdomen" data-f="9"></td>
+
+                                    <td><input type="number" class="edit-cell" data-campo="abdomen" data-f="10"></td>
+
+                                    <td><input type="number" class="edit-cell" data-campo="abdomen" data-f="11"></td>
+
+                                    <td><input type="number" class="edit-cell" data-campo="abdomen" data-f="12"></td>
+
+                                </tr>
+
+                                <!--=====================================================
+                                        CONTINÚA EN LA PARTE 3
+                                        (Cadera, Muslo, Brazo,
+                                        botón Guardar y cierre)
+                                ======================================================-->
+                                <!--=====================================
+                                            CADERA
+                                ======================================-->
+
+                                <tr>
+
+                                    <td class="titulo-fila">
+
+                                        Cadera (cm)
+
+                                    </td>
+
+                                    <td><input type="number" class="edit-cell" data-campo="cadera" data-f="1"></td>
+                                    <td><input type="number" class="edit-cell" data-campo="cadera" data-f="2"></td>
+                                    <td><input type="number" class="edit-cell" data-campo="cadera" data-f="3"></td>
+                                    <td><input type="number" class="edit-cell" data-campo="cadera" data-f="4"></td>
+                                    <td><input type="number" class="edit-cell" data-campo="cadera" data-f="5"></td>
+                                    <td><input type="number" class="edit-cell" data-campo="cadera" data-f="6"></td>
+                                    <td><input type="number" class="edit-cell" data-campo="cadera" data-f="7"></td>
+                                    <td><input type="number" class="edit-cell" data-campo="cadera" data-f="8"></td>
+                                    <td><input type="number" class="edit-cell" data-campo="cadera" data-f="9"></td>
+                                    <td><input type="number" class="edit-cell" data-campo="cadera" data-f="10"></td>
+                                    <td><input type="number" class="edit-cell" data-campo="cadera" data-f="11"></td>
+                                    <td><input type="number" class="edit-cell" data-campo="cadera" data-f="12"></td>
+
+                                </tr>
+
+                                <!--=====================================
+                                            MUSLO
+                                ======================================-->
+
+                                <tr>
+
+                                    <td class="titulo-fila">
+
+                                        Muslo (cm)
+
+                                    </td>
+
+                                    <td><input type="number" class="edit-cell" data-campo="muslo" data-f="1"></td>
+                                    <td><input type="number" class="edit-cell" data-campo="muslo" data-f="2"></td>
+                                    <td><input type="number" class="edit-cell" data-campo="muslo" data-f="3"></td>
+                                    <td><input type="number" class="edit-cell" data-campo="muslo" data-f="4"></td>
+                                    <td><input type="number" class="edit-cell" data-campo="muslo" data-f="5"></td>
+                                    <td><input type="number" class="edit-cell" data-campo="muslo" data-f="6"></td>
+                                    <td><input type="number" class="edit-cell" data-campo="muslo" data-f="7"></td>
+                                    <td><input type="number" class="edit-cell" data-campo="muslo" data-f="8"></td>
+                                    <td><input type="number" class="edit-cell" data-campo="muslo" data-f="9"></td>
+                                    <td><input type="number" class="edit-cell" data-campo="muslo" data-f="10"></td>
+                                    <td><input type="number" class="edit-cell" data-campo="muslo" data-f="11"></td>
+                                    <td><input type="number" class="edit-cell" data-campo="muslo" data-f="12"></td>
+
+                                </tr>
+
+                                <!--=====================================
+                                            BRAZO
+                                ======================================-->
+                                <tr>
+
+                                    <td class="titulo-fila">
+
+                                        Brazo (cm)
+
+                                    </td>
+
+                                    <td><input type="number" class="edit-cell" data-campo="brazo" data-f="1"></td>
+                                    <td><input type="number" class="edit-cell" data-campo="brazo" data-f="2"></td>
+                                    <td><input type="number" class="edit-cell" data-campo="brazo" data-f="3"></td>
+                                    <td><input type="number" class="edit-cell" data-campo="brazo" data-f="4"></td>
+                                    <td><input type="number" class="edit-cell" data-campo="brazo" data-f="5"></td>
+                                    <td><input type="number" class="edit-cell" data-campo="brazo" data-f="6"></td>
+                                    <td><input type="number" class="edit-cell" data-campo="brazo" data-f="7"></td>
+                                    <td><input type="number" class="edit-cell" data-campo="brazo" data-f="8"></td>
+                                    <td><input type="number" class="edit-cell" data-campo="brazo" data-f="9"></td>
+                                    <td><input type="number" class="edit-cell" data-campo="brazo" data-f="10"></td>
+                                    <td><input type="number" class="edit-cell" data-campo="brazo" data-f="11"></td>
+                                    <td><input type="number" class="edit-cell" data-campo="brazo" data-f="12"></td>
+
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+                                    <div class="acciones-monitoreo">
+
+                                        <button
+                                            type="button"
+                                            class="btn-secondary"
+                                            onclick="guardarTablaMonitoreo()">
+
+                                            <i class="fa-solid fa-floppy-disk"></i>
+
+                                            Guardar Historial de Monitoreo
+
+                                        </button>
+
+                                    </div>
+
+                                    <div id="resumenPeso" class="resumen-monitoreo"></div>
+
+                </div>
+
+            </section>
+
+                    
+
+                    <!--=====================================================
+                                APP
+            ======================================================-->
+
+            <section class="app container" id="app">
+
+                <article class="app-txt">
+
+                    <header>
+
+                        <h2>
+                            Descarga nuestra aplicación móvil
+                        </h2>
+
+                    </header>
+
+                    <p>
+
+                        Consulta el menú diario, recibe recomendaciones
+                        nutricionales personalizadas, realiza pedidos,
+                        monitorea tu progreso corporal y accede a ofertas
+                        exclusivas desde cualquier lugar.
+
+                    </p>
+
+                    <div class="descarga">
+
+                        <a href="#">
+
+                            <img
+                                src="images/store1.png"
+                                alt="Descargar en Google Play"
+                                loading="lazy">
+
+                        </a>
+
+                        <a href="#">
+
+                            <img
+                                src="images/store2.png"
+                                alt="Descargar en App Store"
+                                loading="lazy">
+
+                        </a>
+
+                    </div>
+
+                </article>
+
+                <figure class="app-img">
+
+                    <img
+                        src="images/app.png"
+                        alt="Aplicación móvil"
+                        loading="lazy">
+
+                </figure>
+
+            </section>
+
+        </main>
+
+        <!--=====================================================
+                                FOOTER
+        ======================================================-->
+
+        <footer class="footer">
+
+            <div class="footer-content container">
+
+                <!--==============================
+                        ENLACES
+                ==============================-->
+
+                <section class="link">
+
+                    <h3>Sistema</h3>
+
+                    <ul>
+
+                        <li><a href="#header">Inicio</a></li>
+
+                        <li><a href="#productos">Productos</a></li>
+
+                        <li><a href="#recomendaciones">Recomendaciones</a></li>
+
+                        <li><a href="#plan-nutricional">Plan Nutricional</a></li>
+
+                    </ul>
+
+                </section>
+
+                <!--==============================
+                        SERVICIOS
+                ==============================-->
+
+                <section class="link">
+
+                    <h3>Servicios</h3>
+
+                    <ul>
+
+                        <li><a href="#">Menú Diario</a></li>
+
+                        <li><a href="#">Pedidos</a></li>
+
+                        <li><a href="#">Carrito</a></li>
+
+                        <li><a href="#">Soporte</a></li>
+
+                    </ul>
+
+                </section>
+
+                <!--==============================
+                        CONTACTO
+                ==============================-->
+
+                <section class="link">
+
+                    <h3>Contacto</h3>
+
+                    <ul>
+
+                        <li><a href="#">Correo</a></li>
+
+                        <li><a href="#">WhatsApp</a></li>
+
+                        <li><a href="#">Facebook</a></li>
+
+                        <li><a href="#">Instagram</a></li>
+
+                    </ul>
+
+                </section>
+
+                <!--==============================
+                        DESCARGA APP
+                ==============================-->
+
+                <section class="link">
+
+                    <h3>Descarga la App</h3>
+
+                    <div class="descarga">
+
+                        <a href="#">
+
+                            <img
+                                src="images/store1.png"
+                                alt="Google Play"
+                                loading="lazy">
+
+                        </a>
+
+                        <a href="#">
+
+                            <img
+                                src="images/store2.png"
+                                alt="App Store"
+                                loading="lazy">
+
+                        </a>
+
+                    </div>
+
+                </section>
+
+            </div>
+
+            <!--==============================
+                    COPYRIGHT
+            ==============================-->
+
+            <div class="footer-copy container">
+
+                <p>
+
+                    © 2026 Sistema de Comedor Universitario.
+                    Todos los derechos reservados.
+
+                </p>
+
+            </div>
+
+        </footer>
+
+        <!--=====================================================
+                        JAVASCRIPT
+        ======================================================-->
+        <script src="js/cuestionario.js"></script>
+        <script src="js/dashboard.js"></script>
+
+    </body>
+
+</html>
